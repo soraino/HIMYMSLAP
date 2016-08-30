@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SLAP COUNT DOWN</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="jquery.countdown.min.js"></script>
+</head>
+<body style="background-color:black">
+<div class="container body-content">
+       <h2 style="color:red;" class="text-center">www.slapsgiving.com</h2>
+<div class="countdown col-md-5">
+    <table class="table table-condensed col-md-offset-10">
+        <tr>
+            <th><h2 id="day" style="color:red"></h2></th>
+            <th><h2 id="hour" style="color:red"></h2></th>
+            <th><h2 id="minute" style="color:red"></h2></th>
+            <th><h2 id="seconds" style="color:red"></h2></th>
+        </tr>
+        <tr style="color:red;">
+            <td>DAY</td>
+            <td>HOUR</td>
+            <td>MINUTE</td>
+            <td>SECOND</td>
+        </tr>
+    </table>
+</div>
+<div id="sound"></div>
+<script>
+    function playSound(filename) {
+        document.getElementById("sound").innerHTML = '<audio autoplay="autoplay"><source src="' + filename + '.mp3" type="audio/mpeg" /><source src="' + filename + '.ogg" type="audio/ogg" /><embed hidden="true" autostart="true" loop="false" src="' + filename + '.mp3" /></audio>';
+    }
+    $('#day').countdown('2016/11/24', function (event) {
+        $(this).html(event.strftime('%D:'));
+    });
+    $('#hour').countdown('2016/11/24', function (event) {
+        $(this).html(event.strftime('%H:'));
+    });
+    $('#minute').countdown('2016/11/24', function (event) {
+        $(this).html(event.strftime('%M:'));
+    });
+    $('#seconds').countdown('2016/11/24', function (event) {
+        $(this).html(event.strftime('%S'));
+        console.dir('lol')
+        playSound('beep');
+    });
+</script>
+    </div>
+</body>
+</html>
