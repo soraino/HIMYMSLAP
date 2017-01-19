@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SLAP COUNT DOWN</title>
+<title>CNY COUNT DOWN</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -9,7 +9,7 @@
 </head>
 <body style="background-color:black">
 <div class="container body-content">
-       <h2 style="color:red;" class="text-center">www.slapsgiving.com</h2>
+       <h2 style="color:red;" class="text-center">CHINESE NEW YEAR COUNTDOWN</h2>
 <div class="countdown col-md-5">
     <table class="table table-condensed col-md-offset-10">
         <tr>
@@ -31,16 +31,16 @@
     function playSound(filename) {
         document.getElementById("sound").innerHTML = '<audio autoplay="autoplay"><source src="' + filename + '.mp3" type="audio/mpeg" /><source src="' + filename + '.ogg" type="audio/ogg" /><embed hidden="true" autostart="true" loop="false" src="' + filename + '.mp3" /></audio>';
     }
-    $('#day').countdown('2016/11/24', function (event) {
+    $('#day').countdown('2017/1/26', function (event) {
         $(this).html(event.strftime('%D:'));
     });
-    $('#hour').countdown('2016/11/24', function (event) {
+    $('#hour').countdown('2017/1/26', function (event) {
         $(this).html(event.strftime('%H:'));
     });
-    $('#minute').countdown('2016/11/24', function (event) {
+    $('#minute').countdown('2017/1/26', function (event) {
         $(this).html(event.strftime('%M:'));
     });
-    $('#seconds').countdown('2016/11/24', function (event) {
+    $('#seconds').countdown('2017/1/26', function (event) {
         $(this).html(event.strftime('%S'));
         console.dir('lol')
         playSound('beep');
